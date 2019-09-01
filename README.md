@@ -20,7 +20,7 @@ The image uses at least two volume mounts, one to a  store CouchPotato's setting
 ```bash
 docker run -dit \
   -v /path/to/settings:/root/.config/NzbDrone \
-  -v /path/to/media:/media/Downloads \
+  -v /path/to/media:/media/Movies \
   -p 6789:6789
   couchpotato-image-name
 ```
@@ -36,6 +36,6 @@ services:
     ports: 
       - "5050:5050"
     volumes:
-      - /home/path/to/movies:/media/Movies
+      - /path/to/movies:/media/Movies
       - couchpotato_storage:/root/.couchpotato
 ```
